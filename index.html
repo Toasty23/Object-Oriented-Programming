@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <h1>Object Oriented Programmings</h1>
+    <h2>Jari will way mmmm to a food</h2>
+    <script>
+        class Person {
+            constructor(name, age, food) {
+                this.name = name
+                this.age = Number(age)
+                this.food = food
+            }
+            
+            makeSound() {
+                console.log(
+                    this.name + // Jari
+                    " says mmmm to " +
+                    this.food //Makkaraperunat
+                )
+            }
+            
+            onPress() {
+                var p = document.createElement("p");
+                p.innerText = this.name + " says mmmm to Makkaraperunat";
+                document.body.appendChild(p);
+                this.makeSound();
+            }
+        }
+        
+        const Jari = new Person('Jari', 55, 'Makkaraperunat');
+    </script>
+
+    <button onclick="Jari.onPress();">Jari's Food </button>
+</body>
+</html>
